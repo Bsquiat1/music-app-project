@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/Home'
+import MusicPlayer from './components/MusicPlayer'
+import Search from './components/Search'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search</a></li>
+            <li><a href="/music-player">MusicPlayer</a></li>
+          </ul>
+        </nav>
       </header>
+      <main>
+        <BrowserRouter>
+        <Routes>
+          <Route exact path="/" component={Home} />
+          <Route path="/music-player" component={MusicPlayer} />
+          <Route path="/search" component={Search} />
+        </Routes>
+        </BrowserRouter>
+      </main>
+      <footer>
+        <p>&copy; 2023 Skio Music App</p>
+      </footer>
     </div>
   );
 }
