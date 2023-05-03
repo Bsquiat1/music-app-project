@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import MusicPlayer from './components/MusicPlayer';
@@ -7,35 +7,14 @@ import './App.css';
 
 function App() {
   
-  const [featuredItems, setFeaturedItems] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [recentlyPlayedItems, setRecentlyPlayedItems] = useState([]);
+  
 
-  useEffect(() => {
-    // Fetch list of featured tracks
-    fetch("https://theaudiodb.com/api/v1/json/1/track-top10.php")
-      .then((response) => response.json())
-      .then((data) => {
-        setFeaturedItems(data.track);
-      })
-      .catch((error) => console.log(error));
+  
 
-    // Fetch list of genres
-    fetch("https://theaudiodb.com/api/v1/json/1/genres.php")
-      .then((response) => response.json())
-      .then((data) => {
-        setCategories(data.genres);
-      })
-      .catch((error) => console.log(error));
+    
 
-    // Fetch list of recently played tracks
-    fetch("https://theaudiodb.com/api/v1/json/1/recenttracks.php")
-      .then((response) => response.json())
-      .then((data) => {
-        setRecentlyPlayedItems(data.track);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+   
+   
   
   return (
     <BrowserRouter>
@@ -57,7 +36,7 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route path="/" element={<Home featuredItems={featuredItems} categories={categories} recentlyPlayedItems={recentlyPlayedItems} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/music-player" element={<MusicPlayer />} />
             <Route path="/search" element={<Search />} />
           </Routes>
