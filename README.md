@@ -1,4 +1,4 @@
-# Project Lyrics App
+# Project LyriKs App
 
 The app shown in the code is a music player application built with React and Redux. The app allows users to search for and play music, view details about tracks and artists, and discover new music.
 
@@ -24,14 +24,13 @@ This component uses the following components and pages:
 1. _Discover:_ The home page of the application.
 2. _TopArtists:_ A page that displays a list of top artists.
 3. _TopCharts:_ A page that displays a list of top tracks.
-4. _AroundYou:_ A page that displays artists around the user's location.
-5. _ArtistDetails:_ A page that displays details about an artist.
-6. _SongDetails:_ A page that displays details about a track.
-7. _Search:_ A page that displays search results based on a user's input.
+4. _ArtistDetails:_ A page that displays details about an artist.
+5. _SongDetails:_ A page that displays details about a track.
+6. _Search:_ A page that displays search results based on a user's input.
 
 The component fetches the activeSong data from the Redux store, and renders the components and pages based on the user's navigation. The Routes component from react-router-dom is used to render different pages based on the user's navigation.
 
-When a user plays a track, the MusicPlayer component is displayed at the bottom of the screen, and the TopPlay component is displayed on the right-hand side of the screen.
+When a user plays a track, the MusicPlayer component is displayed at the bottom of the screen, and the TopPlay component is displayed on the right-hand side of the screen
 
 
 ## System Requirements
@@ -75,7 +74,7 @@ To set up a development environment, please follow these steps:
 1. Clone the repo
 
    ```shell
-    git clone https://github.com/JavaScript-Mastery-PRO/project1_team4_repository.git
+    git clone https://github.com/Bsquiat1/music-app-project
    ```
 
 2. Change directory to the project directory
@@ -104,9 +103,7 @@ To set up a development environment, please follow these steps:
 
     Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Issues
 
-You've found a bug in the source code, a mistake in the documentation or maybe you'd like a new feature? You can help us by [submitting an issue on GitHub](https://github.com/orgs/JavaScript-Mastery-PRO/projects/8). Before you create an issue, make sure to search the issue archive -- your issue may have already been addressed!
 
 Please try to create bug reports that are:
 
@@ -173,3 +170,7 @@ Some of the key benefits of using Tailwind include:
 - Customizability: Tailwind provides a wide range of configuration options that allow developers to customize the framework to fit their specific needs, including the ability to define custom utility classes.
 
 Overall, Tailwind is a powerful tool that can help developers create beautiful, functional, and consistent UI designs quickly and efficiently.
+
+## Hosting
+
+The site is also hosted kive on netlify, To view it you can follow this link https://spiffy-lollipop-6ac0ac.netlify.app.
